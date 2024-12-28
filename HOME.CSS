@@ -1,0 +1,472 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+background-attachment: fixed;
+min-height: 100vh;
+scroll-behavior: smooth;
+background: white;
+padding-left: 10rem;
+}
+
+body.dark{
+--white:#222;
+--black:#fff;
+--light-color:#aaa;
+--light-bg:#333;
+--border:.1rem solid rgba(255,255,255,.2);
+}
+
+.header {
+position: sticky;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(172, 32, 32, 0.2);
+}
+
+/* Flex Container */
+.flex {
+padding: 1.5rem 2rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+a {
+color: #7b6565;
+text-decoration: none;
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+/* Search Form */
+.search-form {
+position: relative;
+width: 30rem;
+border-radius: .2rem;
+display: flex;
+align-items: center;
+background-color: #f0f0f0;
+}
+
+.search-form input {
+width: 100%;
+padding: 0.8rem 2.5rem 0.8rem 1rem;
+font-size: 1rem;
+border: none;
+border-radius: .2rem;
+color: #333;
+background: none;
+}
+
+.search-form button {
+position: absolute;
+right: 1rem;
+font-size: 1.2rem;
+color: #333;
+background: none;
+border: none;
+cursor: pointer;
+}
+
+a:hover, .search-form button:hover {
+opacity: 0.8;
+}
+
+
+/* Icons */
+.header .flex .icons3 {
+display: flex;
+gap: 1rem;
+}
+
+.header .flex .icons3 div {
+font-size: 1.5rem;
+color: #333;
+border-radius: 0.5rem;
+height: 2.5rem;
+width: 2.5rem;
+cursor: pointer;
+background-color: #f0f0f0;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: background-color 0.3s;
+}
+
+.header .flex .icons3 div:hover {
+background-color: #333;
+color: white;
+}
+
+/* Sidebar */
+
+.side-bar {
+position: fixed;
+top: 0;
+left: 0;
+height: 100vh;
+width: 20rem;
+background-color: #fff;
+border-right: 1px solid #ddd;
+transition: left 0.3s;
+}
+
+
+.side-bar .profile h3 {
+font-size: 2rem;
+color: #000;
+margin-bottom: 0.2rem;
+}
+
+
+/* Sidebar Profile Section */
+.side-bar .profile {
+position: absolute;
+border-radius: .5rem;
+padding: 2rem;
+text-align: center;
+
+}
+
+/* Fixing the profile image in the sidebar */
+.side-bar .profile img {
+width: 8rem; /* Adjust the size as needed */
+height: 8rem;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 1rem;
+/* Add any other styles you need for the profile image */
+}
+
+
+.side-bar .profile span {
+color: #c796c6;
+font-size: 2rem;
+display: block;
+margin-bottom: 0.5rem;
+}
+
+.side-bar .profile .btn {
+background-color: #f43ec4;
+padding: 10px 30px;
+border-radius: 2px;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+transition: background-color 0.3s ease, transform 0.3s ease;
+display: inline-block;
+margin-bottom: 1rem;
+}
+
+.side-bar .profile .btn:hover {
+background-color: #d2099c;
+transform: scale(1.1);
+}
+
+/* Sidebar Profile Section */
+
+
+/* Adjusting navigation bar styling */
+
+
+.navbar3 a {
+display: flex;
+ font-size: 1rem;
+padding: 0.8rem 1rem;
+ color: #272627;
+transition: background-color 0.3s ease;
+margin: 15px;
+margin-top: 350px;
+margin-bottom: -300px;
+margin-left: 50px;
+
+}
+
+.navbar3 a i {
+color: #ca619d;
+margin-right: 3rem;
+}
+
+.navbar3 a span {
+color: #272627;
+}
+
+.navbar3 a:hover {
+background-color: #f0f0f0;
+}
+
+.navbar3 a:hover i {
+color: #000;
+}
+
+
+/*profile section */
+
+.profile-menu{
+position: absolute;
+top: 120%; right: 2rem;
+background-color: #f0f0f0;
+border-radius: .5rem;
+padding: 2rem;
+text-align: center;
+width: 20rem;
+
+}
+
+.profile-menu img{
+height: 8rem;
+width: 8rem;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: .5rem;
+margin-top: -1rem;
+
+}
+
+.profile-menu h3{
+font-size: 2rem;
+color: #000;
+}
+.profile-menu span{
+color:black ;
+font-size: 1.5rem;
+}
+.btn2,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+border-radius: .2rem;
+padding: .5rem;
+font-size: 1.2rem;
+color: var(--white);
+text-transform: capitalize;
+cursor: pointer;
+text-align: center;
+margin-top: .1rem;
+}
+.btn2,
+.delete-btn,
+.option-btn{
+display: block;
+width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+display: inline-block;
+}
+
+.btn2,
+.inline-btn{
+background-color: rgb(189, 54, 180);
+}
+
+.option-btn,
+.inline-option-btn{
+background-color:orange;
+}
+
+.delete-btn,
+.inline-delete-btn{
+background-color: red;
+}
+
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover,
+.btn2:hover,
+.delete-btn:hover,
+.option-btn:hover{
+background-color:rgb(79, 74, 74);
+color: var(--white);
+}
+.profile-menu.hidden {
+display: none;
+}
+
+
+.flex-btn{
+display: flex;
+gap: 1rem;
+margin-top: .2rem;
+}
+
+
+section{
+padding:2rem;
+margin: 0 auto;
+max-width: 1200px;
+}
+
+
+.heading{
+padding-bottom: 1.5rem;
+border-bottom: var(--border);
+font-size: 1.5rem;
+color: var(--black);
+text-transform: capitalize;
+margin-bottom: 2rem;
+}
+.quick-select .box-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+gap: 3rem;
+align-items:flex-start;
+justify-items: center;
+}
+.box2{
+border-radius:1rem;
+background-color: #f1e7ef;
+padding: 2rem;
+
+}
+
+.box2 .title{
+font-size: 2rem;
+color: var(--black);
+}
+.box2 p{
+line-height: 1.5;
+padding-top: 1.5rem;
+font-size: 1rem;
+color: var(--light-color);
+}
+.box2 p span{
+color: var(--main-color);
+}
+.flex9{
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+padding-top: 1.5rem;
+}
+.flex9 a{
+padding: 1rem 1.5rem;
+border-radius: .5rem;
+font-size: 1.2rem;
+background-color: white;
+}
+.flex9 a i{
+margin-right: 1rem;
+color: #ba1380;
+}
+
+.flex9 a span{
+color:var(--light-color);
+}
+.flex9 a:hover{
+background-color: #000;
+}
+.flex9 a:hover i{
+background-color: #000;
+}
+
+
+
+body.dark {
+background-color: #000; /* Set background to black */
+color: #f0f0f0; /* Set text color to light */
+}
+
+/* Adjust header and sidebar colors in dark mode */
+body.dark .header,
+body.dark .side-bar {
+background-color: #1a1a1a; /* Dark gray for header and sidebar */
+color: #f0f0f0;
+}
+
+/* Dark mode for links */
+body.dark a {
+color: #f0f0f0;
+}
+
+/* Dark mode for search form */
+body.dark .search-form {
+background-color: #333; /* Darker background for search box */
+}
+
+body.dark .search-form input {
+background-color: #444;
+color: #ccc;
+}
+
+body.dark .search-form button {
+color: #ccc;
+}
+
+/* Dark mode for icons */
+body.dark .icons3 div {
+background-color: #333;
+color: #ccc;
+}
+
+/* Dark mode for profile menu and sidebar menu */
+body.dark .profile-menu,
+body.dark .side-bar .navbar3 a,
+body.dark .box2 {
+background-color: #1a1a1a;
+color: #f0f0f0;
+}
+
+body.dark .side-bar .navbar3 a:hover {
+background-color: #333;
+}
+
+
+/* Sidebar links in dark mode */
+body.dark .side-bar .navbar3 a {
+color: #f0f0f0; /* Light color for sidebar links */
+background-color: #1a1a1a; /* Dark background */
+}
+
+body.dark .side-bar .navbar3 a:hover {
+background-color: #333; /* Slightly lighter background on hover */
+color: #ffffff; /* Ensure text remains visible */
+}
+
+/* Sidebar link icons in dark mode */
+body.dark .side-bar .navbar3 a i {
+color: #ba1380; /* Color for icons, adjust as needed */
+}
+
+/* Sidebar link text in dark mode */
+body.dark .side-bar .navbar3 a span {
+color: #f0f0f0; /* Ensure the text is light enough for visibility */
+}
+/* Sidebar profile section in dark mode */
+body.dark .side-bar .profile h3 {
+color: #f0f0f0; /* Light color for the heading in dark mode */
+}
+
+/* Sidebar profile section span (sub-heading) in dark mode */
+body.dark .side-bar .profile span {
+color: #b3b3b3; /* Light color for the sub-heading text in dark mode */
+}
+
+/* Profile menu text color in dark mode */
+body.dark .profile-menu {
+background-color: #1a1a1a; /* Dark background for profile menu */
+color: #f0f0f0; /* Light color for text */
+}
+
+/* Profile menu headings in dark mode */
+body.dark .profile-menu h3 {
+color: #ffffff; /* Brighter color for the main heading */
+}
+
+/* Profile menu sub-heading text in dark mode */
+body.dark .profile-menu span {
+color: #b3b3b3; /* Slightly dimmer color for sub-heading text */
+}
+
+/* Highlight Algorithms section on hover */

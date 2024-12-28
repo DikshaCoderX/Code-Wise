@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile</title>
+    <link rel="stylesheet" href="viewprofile.css">
+</head>
+<body>
+
+    <div class="container profile-container">
+        <h2>Your Profile</h2>
+
+        <!-- Profile Photo -->
+        <div class="profile-section">
+            <h3>Profile Photo</h3>
+            <div class="profile-photo">
+                <img id="profile-image" src="default-avatar.jpg" alt="Profile Photo" />
+                <button class="upload-btn" id="upload-btn">Change Photo</button>
+            </div>
+        </div>
+
+        <!-- User Info Section -->
+        <div class="profile-section">
+            <h3>Profile Info</h3>
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <p><strong>Mobile Number:</strong> <span id="user-mobile"></span></p>
+        </div>
+
+        <!-- Saved Playlist Section -->
+        <div class="profile-section">
+            <h3>Saved Playlist</h3>
+            <ul id="playlist">
+                <li>No playlists saved yet.</li>
+            </ul>
+        </div>
+
+        <!-- Help Section -->
+        <div class="profile-section">
+            <h3>Help</h3>
+            <p>If you need assistance, please contact support@example.com</p>
+        </div>
+
+        <button id="logout-btn">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

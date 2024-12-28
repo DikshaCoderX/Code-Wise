@@ -1,0 +1,144 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Main container styles */
+.container {
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Container hover effect */
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Heading styles */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Form styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styles */
+label {
+    font-weight: 500;
+    margin: 12px 0 6px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Input field styles */
+input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styles */
+button {
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -15px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #003d7a;
+}
+
+/* File input (select picture) styles */
+input[type="file"] {
+    padding: 8px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    background-color: #e6e6e6;
+}
+
+/* Custom styling for file input label */
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+input[type="file"]:hover::-webkit-file-upload-button {
+    background-color: #0056b3;
+}
+
+/* Spacing and responsiveness */
+@media (max-width: 500px) {
+    .container {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}
